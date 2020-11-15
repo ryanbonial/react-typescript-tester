@@ -8,18 +8,20 @@ function App() {
   const [searchTerm, setSearchTerm] = useState('');
   const getRandomDadJoke = async () => {
     const dadResp = await fetch('/api/dad-joke/', fetchOptions);
-    // const dadResp = await fetch('https://icanhazdadjoke.com', fetchOptions);
     const dadJokeResults = await dadResp.json();
     console.log(dadJokeResults)
     setDadJoke(dadJokeResults.joke);
   }
 
+  function getRandomInt(max: number) {
+    return Math.floor(Math.random() * Math.floor(max));
+  }
+
   const searchDadJoke = async () => {
     const dadResp = await fetch(`/api/dad-joke/search?term=${searchTerm}`, fetchOptions);
-    // const dadResp = await fetch('https://icanhazdadjoke.com', fetchOptions);
     const dadJokeResults = await dadResp.json();
     console.log(dadJokeResults)
-    setDadJoke(dadJokeResults.joke);
+    setDadJoke(dadJokeResults.results[getRandomInt(dadJokeResults.results.length - 1)].joke);
   }
 
   return (
