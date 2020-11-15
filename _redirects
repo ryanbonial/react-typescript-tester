@@ -1,0 +1,1 @@
+/api/dad-joke/* page=:page limit=:limit term:=term https://icanhazdadjoke.com/search?page=:page&limit=:limit&term=:term 200
