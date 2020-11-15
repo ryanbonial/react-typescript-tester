@@ -6,11 +6,11 @@ function App() {
   const fetchOptions = { headers: { 'Accept': 'application/json' }};
   const [dadJoke, setDadJoke] = useState('');
   const getDadJoke = async () => {
-    const dadResp = await fetch('/dad-joke/search?page=1&limit=20&term=cake', fetchOptions);
-    // const dadResp = await fetch('https://icanhazdadjoke.com/search?page=1&limit=20&term=apple', fetchOptions);
+    const dadResp = await fetch('/dad-joke', fetchOptions);
+    // const dadResp = await fetch('https://icanhazdadjoke.com', fetchOptions);
     const dadJokeResults = await dadResp.json();
-    console.log(dadJokeResults.results)
-    setDadJoke(dadJokeResults.results[0].joke);
+    console.log(dadJokeResults)
+    setDadJoke(dadJokeResults.joke);
   }
 
   return (
