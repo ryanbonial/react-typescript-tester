@@ -1,3 +1,7 @@
+# Set the `netlify dev` command to be the original react dev server command
+[dev]
+  command = "yarn start:react"
+
 # Set yarn install production to false so that devDependencies are installed
 # more info: https://classic.yarnpkg.com/en/docs/cli/install/#toc-yarn-install-production-true-false
 [context.production]
