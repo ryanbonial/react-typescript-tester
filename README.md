@@ -1,4 +1,4 @@
-![Test](https://github.com/ryanbonial/react-typescript-tester/workflows/Test/badge.svg)
+[![Test](https://github.com/ryanbonial/react-typescript-tester/workflows/Test/badge.svg)](https://github.com/ryanbonial/react-typescript-tester/actions?query=workflow%3ATest)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/2d9c3286-1a2c-468e-b6fa-20fb4467782b/deploy-status)](https://app.netlify.com/sites/react-typescript-tester/deploys)
 # Netlify with React, TypeScript, Yarn, and more...
 
